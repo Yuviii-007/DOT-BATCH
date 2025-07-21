@@ -4,6 +4,7 @@ function sum1(){
         total = total+value ;
     return total ;
 }
+console.log(sum1());
 
 let ans = sum1(1,2,3,4,5,6);
 console.log(ans)

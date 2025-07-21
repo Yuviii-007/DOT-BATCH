@@ -3,9 +3,12 @@
 let mypromise = new Promise(function(resolve , reject){
     console.log('hey i am inside promise')
     resolve(1998);
-})
+})  
 
-console.log('first');
+console.log('first' );
+mypromise.then(function(value) {
+    console.log("Promise fulfilled with:", value);
+});
 
 
 //promise-

@@ -7,8 +7,8 @@ let courses = [
 
 console.log(courses);
 
-course = courses.find(function course) {
+let course = courses.find(function (course ){
     return course.naam === 'yuvraj';
 }
-
+ )
 console.log(course);

@@ -15,3 +15,4 @@ let output = wada1.then(() => {
     return wada2
 })
 output.then((value) => console.log(value));
+wada1.then((value) => console.log(value));

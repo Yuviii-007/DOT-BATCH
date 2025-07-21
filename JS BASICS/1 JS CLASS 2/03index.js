@@ -7,6 +7,7 @@ function Rectangle(len, bre){
 }
 
 let rectangleObject = Rectangle(8,1)
+console.log(rectangleObject)
 
 
 //constructor property

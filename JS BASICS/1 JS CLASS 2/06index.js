@@ -13,5 +13,12 @@ let dest ={} ;
 for(let key in src){
 
     dest[key] = src[key] ;
-    console.log(dest) ;
+    // console.log(dest) ;
 }
+
+console.log("This is dest " ,dest) ;
+
+
+
+let dest4 = {...src};
+console.log("this is dest 4" ,dest4)

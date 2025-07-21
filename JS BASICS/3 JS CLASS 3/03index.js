@@ -10,7 +10,7 @@ console.log(number.includes(7));
 
 //ab hm search krenge ki koi number ,index number ke bad hai ya nahi
 
-console.log(number.indexOf(3, 2))
+console.log(number.indexOf(3, 3))
 
 
 if(number.indexOf(4)==-1){

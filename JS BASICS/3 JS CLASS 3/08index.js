@@ -35,5 +35,5 @@ let parts = string.split(' ')
 console.log(parts);
 
 
-let join = parts.join(_);
+let join = parts.join('_');
 console.log(join);

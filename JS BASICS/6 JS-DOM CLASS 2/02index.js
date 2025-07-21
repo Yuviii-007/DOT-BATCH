@@ -1,3 +1,4 @@
+console.log("hello")
 let element = document.querySelector('#wrapper');
 
 element.addEventListener('click', function(event){

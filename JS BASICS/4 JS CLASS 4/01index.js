@@ -35,8 +35,8 @@ let person = {
 
   set fullname(value) {
     let part = value.split(' ');
-    this.fname = parts[0];
-    this.lname = parts[1];
+    this.fname = part[0];
+    this.lname = part[1];
   }
 };
 
