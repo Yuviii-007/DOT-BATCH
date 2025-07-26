@@ -8,10 +8,11 @@ const Cart = () => {
 
   const { cart } = useSelector((state) => state)
 
-  const [totalAmount , setTotalAmount] = useState(0);
+  const [totalAmount, setTotalAmount] = useState();
 
   useEffect(() => {
-    setTotalAmount(cart.reduce((acc,curr) => acc + curr.length, 0));
+    setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
+
 
   }, [cart])
 
@@ -54,15 +55,16 @@ const Cart = () => {
         )
           :
           (
-            <div>
-              <h1> Cart Empty  </h1>
+            <div className="flex flex-col items-center justify-center h-[80vh] gap-6">
+              <h1 className="text-3xl font-semibold text-gray-700">Cart Empty</h1>
+
 
               <Link to={"/"}>
-                <button>
+                <button className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 transition-all duration-300 rounded-lg font-semibold text-gray-800 shadow-md">
                   Shop Now
                 </button>
               </Link>
-            </div >
+            </div>
           )
       }
 
