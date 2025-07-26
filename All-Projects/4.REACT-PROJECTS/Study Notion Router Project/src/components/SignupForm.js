@@ -57,8 +57,8 @@ function SignupForm({ setIsLoggedIn }) {
             <div className="flex bg-richblack-800 max-w-max rounded-full p-1 gap-x-1">
                 <button
                     className={`${accountType === "student"
-                            ? "bg-richblack-900 text-richblack-5"
-                            : "bg-transparent text-richblack-200"
+                        ? "bg-richblack-900 text-richblack-5"
+                        : "bg-transparent text-richblack-200"
                         } py-2 px-5 rounded-full transition-all duration-200`}
                     onClick={() => setAccountType("student")}
                     type="button"
@@ -68,8 +68,8 @@ function SignupForm({ setIsLoggedIn }) {
 
                 <button
                     className={`${accountType === "instructor"
-                            ? "bg-richblack-900 text-richblack-5"
-                            : "bg-transparent text-richblack-200"
+                        ? "bg-richblack-900 text-richblack-5"
+                        : "bg-transparent text-richblack-200"
                         } py-2 px-5 rounded-full transition-all duration-200`}
                     onClick={() => setAccountType("instructor")}
                     type="button"
@@ -89,7 +89,7 @@ function SignupForm({ setIsLoggedIn }) {
                             className="bg-richblack-800 rounded-[4px] w-full px-[12px] py-[8px]"
                             required
                             type="text"
-                            placeholder="Enter First Name"
+                            placeholder="First Name"
                             name="firstName"
                             onChange={changeHandler}
                             value={formData.firstName}
@@ -104,7 +104,7 @@ function SignupForm({ setIsLoggedIn }) {
                             className="bg-richblack-800 rounded-[4px] w-full px-[12px] py-[8px]"
                             required
                             type="text"
-                            placeholder="Enter Last Name"
+                            placeholder="Last Name"
                             name="lastName"
                             onChange={changeHandler}
                             value={formData.lastName}
@@ -129,6 +129,7 @@ function SignupForm({ setIsLoggedIn }) {
 
                 {/* Password Fields */}
                 <div className="flex gap-x-4">
+                    {/* Create Password Field */}
                     <label className="w-full relative">
                         <p className="text-richblack-5 mb-1 text-[0.875rem] leading-[1.375rem]">
                             Create Password<sup className="text-pink-200">*</sup>
@@ -143,13 +144,14 @@ function SignupForm({ setIsLoggedIn }) {
                             value={formData.password}
                         />
                         <span
-                            className="absolute top-[38px] right-3 z-10 cursor-pointer"
+                            className="absolute top-[34px] sm:top-[38px] right-2 sm:right-3 z-10 cursor-pointer text-xl text-richblack-300"
                             onClick={() => setShowPassword((prev) => !prev)}
                         >
                             {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
                         </span>
                     </label>
 
+                    {/* Confirm Password Field */}
                     <label className="w-full relative">
                         <p className="text-richblack-5 mb-1 text-[0.875rem] leading-[1.375rem]">
                             Confirm Password <sup className="text-pink-200">*</sup>
@@ -164,12 +166,13 @@ function SignupForm({ setIsLoggedIn }) {
                             value={formData.confirmPassword}
                         />
                         <span
-                            className="absolute top-[38px] right-1.5 z-10 cursor-pointer"
+                            className="absolute top-[34px] sm:top-[38px] right-2 sm:right-3 z-10 cursor-pointer text-xl text-richblack-300"
                             onClick={() => setShowConfirmPassword((prev) => !prev)}
                         >
                             {showConfirmPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
                         </span>
                     </label>
+
                 </div>
 
                 <button className="bg-yellow-50 text-richblack-900 font-semibold
